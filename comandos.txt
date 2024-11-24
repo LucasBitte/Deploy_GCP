@@ -1,0 +1,112 @@
+# Verificar a instalação do Python
+python3 --version
+# ou
+python --version
+
+# Instalar o Python (se necessário)
+sudo apt update
+sudo apt install python3 python3-venv python3-pip
+
+# Criar o ambiente virtual
+python3 -m venv nome_do_ambiente
+
+# Ativar o ambiente virtual
+source nome_do_ambiente/bin/activate
+
+# Instalar pacotes no ambiente virtual
+pip install nome_do_pacote
+# Exemplo:
+pip install numpy pandas
+
+# Verificar pacotes instalados no ambiente virtual
+pip list
+
+# Atualizar o gerenciador de pacotes pip
+pip install --upgrade pip
+
+# Desativar o ambiente virtual
+deactivate
+
+# Excluir um ambiente virtual
+rm -rf nome_do_ambiente
+
+
+
+# Configurar o Git com nome de usuário e email
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"
+
+# Inicializar um repositório Git no diretório atual
+git init
+
+# Clonar um repositório remoto
+git clone url_do_repositorio
+
+# Adicionar arquivos ao stage (preparar para commit)
+git add nome_do_arquivo
+# Adicionar todos os arquivos ao stage
+git add .
+
+# Verificar o status do repositório (arquivos modificados, não rastreados, etc.)
+git status
+
+# Criar um commit com uma mensagem
+git commit -m "Mensagem do commit"
+
+# Ver histórico de commits
+git log
+
+# Ver diferenças entre o código atual e o stage
+git diff
+# Ver diferenças entre o stage e o último commit
+git diff --staged
+
+# Criar uma nova branch
+git branch nome_da_branch
+
+# Mudar para outra branch
+git checkout nome_da_branch
+# Criar e mudar para uma nova branch
+git checkout -b nome_da_branch
+
+# Mesclar uma branch na branch atual
+git merge nome_da_branch
+
+# Excluir uma branch local
+git branch -d nome_da_branch
+
+# Conectar ao repositório remoto
+git remote add origin url_do_repositorio
+
+# Verificar conexões remotas
+git remote -v
+
+# Enviar alterações para o repositório remoto
+git push origin nome_da_branch
+# Para enviar o branch principal (exemplo: main)
+git push -u origin main
+
+# Atualizar o repositório local com alterações remotas
+git pull origin nome_da_branch
+
+# Resolver conflitos de merge (manual, se necessário)
+# Após resolver conflitos, adicione os arquivos corrigidos:
+git add nome_do_arquivo
+# Finalize com um commit:
+git commit
+
+# Reverter um commit (mantendo as alterações no código)
+git reset HEAD~1
+# Reverter um commit (desfazendo as alterações no código)
+git reset --hard HEAD~1
+
+# Excluir um arquivo do Git sem removê-lo do sistema
+git rm --cached nome_do_arquivo
+
+# Verificar quais arquivos são ignorados pelo .gitignore
+git check-ignore *
+
+# Criar uma tag no repositório
+git tag -a v1.0 -m "Versão 1.0"
+# Enviar tags para o repositório remoto
+git push origin --tags
